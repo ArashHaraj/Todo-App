@@ -7,7 +7,7 @@ export const EditTodoForm = ({editTodo, task}) => {
       // prevent default action
         e.preventDefault();
         // edit todo
-        editTodo(value, task.id);
+       value ? editTodo(value, task.id) : alert('cant submit null') ;
       };
   return (
     <form onSubmit={handleSubmit} className="TodoForm">
